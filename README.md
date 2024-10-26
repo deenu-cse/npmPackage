@@ -1,55 +1,59 @@
-Custom DB
+🎨 Custom DB
 A simple database management tool that lets you perform CRUD operations via the CLI and interact with an API to submit commands. This tool allows developers to quickly manage a local JSON-based database and also provides a server to handle form submissions.
 
-Features
-*Custom CLI for creating, reading, updating, and deleting records.
-*Express API server to run commands via HTTP requests.
-*JSON-based local storage.
-*Easy to integrate into any project.
+✨ Features
+📄 Custom CLI for creating, reading, updating, and deleting records.
+🌐 Express API server to run commands via HTTP requests.
+📂 JSON-based local storage.
+🛠️ Easy integration into any project.
 
-Installation
+
+🚀 Installation
 To install the custom-db package run the following command:
 
 *npm install custom-db-cli
 
+Installation To install the custom-db package globally run the following command:
+
+*npm install -g custom-db-cli
+
 This will make the custom-db CLI and server commands available globally.
 
 
-CLI Usage
+🔧 CLI Usage
 The custom-db command provides several operations to interact with your local JSON database.
 
-Create a Record:
+➕ Create a Record
 custom-db create --name="John Doe" --age=25 --email="john@example.com" --password="password123"
 
-Read All Records:
+
+📖 Read All Records
 custom-db read
 
 This command will display all the records stored in your JSON database.
 
-Update a Record:
+✏️ Update a Record
 
 custom-db update --id="12345" --name="Jane Doe" --age=26
 
 Replace the id with the actual record ID you want to update.
 
-Delete a Record:
+❌ Delete a Record
 
 custom-db delete --id="12345"
 
 Replace the id with the actual record ID you want to delete.
 
-
-
-*Server Usage
+🌍 Server Usage
 custom-db also comes with a built-in server to handle form submissions via HTTP requests.
 
-Start the Server
+▶️ Start the Server
 To start the server, use the following command:
 
-custom-db-server
+*npx custom-db-server
 This will run a server on http://localhost:1269. The server provides an API endpoint that you can use to run commands from a form submission or a frontend application.
 
-Example: Running Commands via API
+Example: 🛠️ Running Commands via API
 Once the server is running, you can send POST requests to http://localhost:1269/run-command to run commands via the API.
 
 Here’s an example of how to submit a command using a POST request:
@@ -62,10 +66,10 @@ Content-Type: application/json
 }
 The server will execute the command and return a response.
 
-** Example: Frontend Form Integration
+-🎨 Example: Frontend Form Integration
 If you want to integrate this with a frontend form (e.g., React), you can use the fetch API to send the command:
 
-
+```javascript
 const handleSubmit = (e) => {
   e.preventDefault();
 
