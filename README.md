@@ -2,6 +2,7 @@
 A simple database management tool that lets you perform CRUD operations via the CLI and interact with an API to submit commands. This tool allows developers to quickly manage a local JSON-based database and also provides a server to handle form submissions.
 
 ✨ Features
+
 📄 Custom CLI for creating, reading, updating, and deleting records.
 🌐 Express API server to run commands via HTTP requests.
 📂 JSON-based local storage.
@@ -51,10 +52,11 @@ custom-db also comes with a built-in server to handle form submissions via HTTP 
 To start the server, use the following command:
 
 *npx custom-db-server
-This will run a server on http://localhost:1269. The server provides an API endpoint that you can use to run commands from a form submission or a frontend application.
+
+This will run a server on custom-db-cli.vercel.app. The server provides an API endpoint that you can use to run commands from a form submission or a frontend application.
 
 Example: 🛠️ Running Commands via API
-Once the server is running, you can send POST requests to http://localhost:1269/run-command to run commands via the API.
+Once the server is running, you can send POST requests to https://custom-db-cli.vercel.app/api/run-command to run commands via the API.
 
 Here’s an example of how to submit a command using a POST request:
 
@@ -75,7 +77,7 @@ const handleSubmit = (e) => {
 
   const command = `custom-db create --name="${formData.name}" --age="${formData.age}" --email="${formData.email}" --password="${formData.password}"`;
 
-  fetch('http://localhost:1269/run-command', {
+  fetch('https://custom-db-cli.vercel.app/api/run-command', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
