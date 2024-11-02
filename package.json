@@ -1,8 +1,24 @@
 {
   "name": "custom-db-cli",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "A CLI tool to for beginner developers who want to add basic form functionality to their web projects without needing to learn backend development. With this package, students can create, read, update, and delete data from forms seamlessly and store it, without writing any backend code.",
   "main": "lib/db.js",
+  "keywords": [
+    "database",
+    "CLI",
+    "database-tool",
+    "command-line-tool",
+    "db-cli",
+    "database-management",
+    "data-manipulation",
+    "automation",
+    "custom-database",
+    "query-tool",
+    "dev-tool",
+    "SQL",
+    "NoSQL",
+    "workflow"
+  ],
   "bin": {
     "custom-db": "bin/cli.js",
     "custom-db-server": "bin/server.js"
@@ -18,7 +34,7 @@
   "files": [
     "bin/",
     "lib/",
-    "data/"   
+    "data/"
   ],
   "author": "Deendayal Verma",
   "license": "MIT"
