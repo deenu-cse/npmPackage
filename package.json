@@ -37,5 +37,12 @@
     "data/"
   ],
   "author": "Deendayal Verma",
-  "license": "MIT"
+  "license": "MIT",
+  "vercel": {
+    "functions": {
+      "api/*.js": {
+        "runtime": "nodejs14.x"
+      }
+    }
+  }
 }

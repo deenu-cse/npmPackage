@@ -24,7 +24,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const command = `custom-db create --name="${formData.name}" --age="${formData.age}" --email="${formData.email}" --password="${formData.password}" --gender="${formData.gender}"`;
-    fetch('http://localhost:1269/run-command', {
+    fetch('https://custom-db-cli.vercel.app/api/run-command', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
