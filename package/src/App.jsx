@@ -24,12 +24,15 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const command = `custom-db create --name="${formData.name}" --age="${formData.age}" --email="${formData.email}" --password="${formData.password}" --gender="${formData.gender}"`;
+
+    const MONGO_DB_URI = "mongodb+srv://vdeendayal866:deen199@cluster0.ouj6s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
     fetch('https://custom-db-cli.vercel.app/api/run-command', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ command }),
+      body: JSON.stringify({ command, MONGO_DB_URI }),
     })
       .then(response => response.json())
       .then(data => {

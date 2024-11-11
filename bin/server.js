@@ -13,7 +13,7 @@ app.use(cors());
 
 // Endpoint to handle form submission
 app.post('/run-command', (req, res) => {
-    const { command } = req.body;
+    const { command, MONGO_DB_URI } = req.body;
     console.log(req.body)
     // Execute the command in the terminal
     exec(command, (error, stdout, stderr) => {

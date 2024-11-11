@@ -7,6 +7,7 @@ A simple database management tool that lets you perform CRUD operations via the 
 🌐 Express API server to run commands via HTTP requests.
 📂 JSON-based local storage.
 🛠️ Easy integration into any project.
+🏗️ Migrate data to MongoDB via CLI.
 
 
 🚀 Installation
@@ -44,6 +45,12 @@ Replace the id with the actual record ID you want to update.
 custom-db delete --id="12345"
 
 Replace the id with the actual record ID you want to delete.
+
+🏗️ Migrate Data to MongoDB
+
+You can now migrate your JSON data to MongoDB with the following command:
+
+npx custom-db migrateMongo --DbUri="your-connection-string"
 
 🌍 Server Usage
 custom-db also comes with a built-in server to handle form submissions via HTTP requests.
